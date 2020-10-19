@@ -16,7 +16,7 @@
     "test:watch": "jest --watch",
     "test:update": "jest --updateSnapshot",
     "eslint": "eslint --ext .ts --fix src test",
-    "deploy": "cdk8s --app \"npx ts-node src/main.ts\" synth && kubectl apply -f dist/"
+    "deploy": "cdk8s --app \"npx ts-node test/tasklist/main.ts\" synth && kubectl apply -f dist/"
   },
   "devDependencies": {
     "@types/express": "^4.17.8",
@@ -38,8 +38,8 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "cdk8s": "^0.0.0",
-    "cdk8s-plus": "^0.0.0",
+    "cdk8s": "^0.31.0",
+    "cdk8s-plus": "^0.31.0",
     "constructs": "^3.0.18",
     "express": "^4.17.1"
   },

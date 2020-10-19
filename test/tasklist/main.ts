@@ -1,6 +1,6 @@
 import { App, Chart, ChartOptions } from 'cdk8s';
 import { Construct } from 'constructs';
-import { Router } from './router';
+import { Router } from '../../src';
 
 class MyChart extends Chart {
   constructor(scope: Construct, id: string, opts: ChartOptions = {}) {

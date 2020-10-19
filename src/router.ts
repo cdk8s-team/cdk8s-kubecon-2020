@@ -4,7 +4,6 @@ import * as path from 'path';
 import * as kp from 'cdk8s-plus';
 import { Construct } from 'constructs';
 
-
 export class Router extends Construct {
   private readonly ingress: kp.Ingress;
 
@@ -14,10 +13,10 @@ export class Router extends Construct {
     this.ingress = new kp.Ingress(this, 'ingress');
   }
 
-  public addBackend(url: string, directory: string, options: BackendOptions = {}) {
-    if (fs.existsSync(path.join(directory, 'index.ts'))) {
+  public addBackend(url: string, codedir: string, options: BackendOptions = {}) {
+    if (fs.existsSync(path.join(codedir, 'index.ts'))) {
       const service = new TypeScriptBackend(this, `runtime-${url}`, {
-        codeDirectory: directory,
+        codeDirectory: codedir,
         ...options,
       });
 
@@ -25,7 +24,7 @@ export class Router extends Construct {
       return service;
     }
 
-    throw new Error(`unable to determine runtime from contents of ${directory}`);
+    throw new Error(`unable to determine runtime from contents of ${codedir}`);
   }
 }
 
@@ -69,19 +68,15 @@ class Backend extends kp.Service {
     const sourceHash = hash.digest('hex');
 
     const deployment = new kp.Deployment(this, `deployment-${sourceHash}`, {
-      spec: {
-        replicas: props.replicas,
-        podSpecTemplate: {
-          containers: [container],
-        },
-      },
+      replicas: props.replicas,
+      containers: [container],
     });
 
     const cm = new kp.ConfigMap(this, 'code');
     cm.addDirectory(props.codeDirectory);
     container.mount(props.mountDir, kp.Volume.fromConfigMap(cm));
 
-    this.spec.addDeployment(deployment, port);
+    this.addDeployment(deployment, port);
   }
 }
 
