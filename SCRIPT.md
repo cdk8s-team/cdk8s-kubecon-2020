@@ -8,36 +8,38 @@
 
 ## Intro
 
-1. projen new typescript-app
-2. add deps: `cdk8s`, `cdk8s-plus`, `constructs`
-3. `main.ts` - talk about construct tree
-4. empty chart, show output
-5. pod with `alpine` echo "hello"
-6. `deploy` script
-7. prune
+* Introduce Elad
+* Invite Eli
+* kind
+* Project structure
+* `main.ts` - talk about construct tree
+* empty chart, show output
+* ApiObject `v1/ConfigMap` with `data`
+* Deployment with `alpine` echo "hello"
+* `deploy` script
+* prune
 
 ## Hello Endpoint
 
-1. Invite Eli - "api router with docker based backends".
-2. API design
-3. `/hello` endpoint
+* Eli: "api router with docker based backends".
+* API design
+* `/counter` endpoint
    1. `Dockerfile`, `index.js` (+ SIGINT)
    2. Image (`cdk8s-image`)
-   3. Service/Deployment
-      1. Port-forward to test
-   4. Ingress
+   3. Ingress
+   4. Deployment
+   5. expose() -> Service
+   6. Backend
 
 ## Productization
 
-1. Add replicas, add `hostname()`, show load balancing
-2. Downtime?
-3. Add readiness probe
+* Readiness Probe
+* Replicas
 
-## Counter
+## Redis
 
-1. Eli: "lets get real and implement a counter"
-2. Redis, helm chart
-3. Redis test deployment
-4. Redis construct
-5. Implement counter
-6. Redis commander
+* Redis, helm chart
+* Redis test deployment
+* Redis construct
+* Implement counter
+* Redis commander

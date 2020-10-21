@@ -25,7 +25,7 @@ export class Redis extends Construct {
       containers: [
         new Container({
           image: 'redis',
-          command: ['/bin/bash', '-c', 'redis-cli', '--pass $REDIS_PASSWORD', '-h $REDIS_HOST PING'],
+          command: ['/bin/bash', '-c', 'redis-cli --pass $REDIS_PASSWORD, -h $REDIS_HOST PING'],
           env: {
             REDIS_HOST: EnvValue.fromValue(this.masterHost),
             REDIS_PASSWORD: EnvValue.fromSecretValue(this.password),
