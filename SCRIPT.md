@@ -27,11 +27,10 @@
 * API design
 * `/counter` endpoint
    1. `Dockerfile`, `index.js` (+ SIGINT)
-   2. Image (`cdk8s-image`)
    3. Ingress
+   6. Backend
    4. Deployment
    5. expose() -> Service
-   6. Backend
 
 [25:00]
 
@@ -39,19 +38,10 @@
 
 * Readiness Probe
 * Replicas
-
-[30:00]
-
-## Redis
-
 * Redis, helm chart
-* Redis test deployment
-
-[40:00]
-
 * Redis construct
 
-[42:00]
+[40:00]
 
 * Implement counter
 
