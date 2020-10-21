@@ -12,7 +12,7 @@
 * Invite Eli
 * kind
 
-[05:00]
+[03:00]
 
 * Project structure
 * `main.ts` - talk about construct tree
@@ -22,7 +22,7 @@
 * `deploy` script
 * prune
 
-[15:00]
+[20:00]
 
 ## Counter Endpoint
 
@@ -35,7 +35,7 @@
    4. Deployment
    5. expose() -> Service
 
-[25:00]
+[35:00]
 
 ## Productization
 
@@ -44,7 +44,7 @@
 * Redis, helm chart
 * Redis construct
 
-[40:00]
+[45:00]
 
 * Implement counter
 
