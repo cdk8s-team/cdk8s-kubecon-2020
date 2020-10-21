@@ -117,4 +117,4 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 # load some images into kind
 kind load docker-image alpine
 kind load docker-image redis
-kind load docker-image node
+kind load docker-image node:alpine
