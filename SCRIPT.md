@@ -19,7 +19,9 @@
 * `deploy` script
 * prune
 
-## Hello Endpoint
+[15:00]
+
+## Counter Endpoint
 
 * Eli: "api router with docker based backends".
 * API design
@@ -31,15 +33,29 @@
    5. expose() -> Service
    6. Backend
 
+[25:00]
+
 ## Productization
 
 * Readiness Probe
 * Replicas
 
+[30:00]
+
 ## Redis
 
 * Redis, helm chart
 * Redis test deployment
+
+[40:00]
+
 * Redis construct
+
+[42:00]
+
 * Implement counter
+
+[50:00]
+
 * Redis commander
+
