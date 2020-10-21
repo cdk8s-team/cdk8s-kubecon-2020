@@ -6,11 +6,14 @@ const project = new TypeScriptAppProject({
     'constructs',
     'cdk8s-plus',
     'cdk8s',
-    'express'
+    'cdk8s-image',
   ],
   devDeps: [
     'ts-node',
-    '@types/express'
+    '@types/express',
+    '@types/redis',
+    'redis',
+    'express'
   ],
 });
 
