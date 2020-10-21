@@ -11,6 +11,9 @@
 * Introduce Elad
 * Invite Eli
 * kind
+
+[05:00]
+
 * Project structure
 * `main.ts` - talk about construct tree
 * empty chart, show output
