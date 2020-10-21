@@ -107,3 +107,12 @@ kubectl wait --namespace ingress-nginx \
   --for=condition=ready pod \
   --selector=app.kubernetes.io/component=controller \
   --timeout=180s
+
+
+# bitnami helm repo (for redis)
+helm repo add bitnami https://charts.bitnami.com/bitnami
+
+# load some images into kind
+kind load docker-image alpine
+kind load docker-image redis
+kind load docker-image node

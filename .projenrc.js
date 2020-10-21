@@ -18,7 +18,7 @@ const project = new TypeScriptAppProject({
 });
 
 project.addScript('deploy', 
-  'cdk8s --app "npx ts-node test/tasklist/main.ts" synth', 
-  'kubectl apply -f dist/');
+  'cdk8s --app "npx ts-node src/app/main.ts" synth', 
+  'kubectl apply -f dist/ --prune --selector "prune=kubecon-demo"');
 
 project.synth();

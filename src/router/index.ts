@@ -14,6 +14,7 @@ export class Router extends Construct {
   public addBackend(url: string, codedir: string, options: BackendOptions = {}) {
     const service = new Backend(this, `runtime-${url}`, {
       codeDirectory: codedir,
+      registry: 'localhost:5000',
       ...options,
     });
 
