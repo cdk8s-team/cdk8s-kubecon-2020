@@ -103,6 +103,8 @@ fi
 
 # install nginx as an ingress controller
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/kind/deploy.yaml
+sleep 5
+echo "waiting for nginx to finish deployment..."
 kubectl wait --namespace ingress-nginx \
   --for=condition=ready pod \
   --selector=app.kubernetes.io/component=controller \
