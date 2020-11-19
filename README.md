@@ -6,6 +6,4 @@ This repo includes the source code used in the KubeCon NA 2020 Session.
 
 1. Clone this repo
 2. Run `yarn`
-3. Open VSCode
-
-## Build
+3. `yarn deploy` to compile, synth and deploy to your cluster
