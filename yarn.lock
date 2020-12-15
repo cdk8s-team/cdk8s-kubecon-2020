@@ -1240,9 +1240,9 @@ caseless@~0.12.0:
   integrity sha1-G2gcIf+EAzyCZUMJBolCDRhxUdw=
 
 cdk8s-image@^0.1.2:
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/cdk8s-image/-/cdk8s-image-0.1.7.tgz#a87709e6af0656d0a1746acff7e4395f3a36cc90"
-  integrity sha512-N4cCm5UYb+/WQRr/imIIzvcQID5A5fcrCbEwYpxQz5a0tbEfM1dnGW9PYMN64VIAFvOoijeAg0XWq22qYTaduw==
+  version "0.1.70"
+  resolved "https://registry.yarnpkg.com/cdk8s-image/-/cdk8s-image-0.1.70.tgz#9bf055ea5ae7129ac23b58c63d8f6a2c23eb66b7"
+  integrity sha512-hiYTXli4WRF29wpHSC0eml64rRCklw3S9hCkGrX8PeGamTGO8eOxZGx2p/CzeQ13MvasH5l1jRBvqvJAVc+8EA==
 
 cdk8s-plus@^0.33.0:
   version "0.33.0"
