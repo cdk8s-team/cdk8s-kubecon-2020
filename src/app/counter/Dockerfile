@@ -13,4 +13,4 @@ ADD . /app
 ENV PORT=8080
 EXPOSE $PORT
 
-CMD [ "usr/bin/env", "node", "/app" ]
+CMD [ "/usr/bin/env", "node", "/app" ]
