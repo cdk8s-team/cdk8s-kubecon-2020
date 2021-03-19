@@ -1,6 +1,7 @@
 const { TypeScriptAppProject } = require('projen');
 
 const project = new TypeScriptAppProject({
+  defaultReleaseBranch: 'main',
   name: 'kubecon-demo',
   deps: [
     'constructs',
@@ -13,12 +14,12 @@ const project = new TypeScriptAppProject({
     '@types/express',
     '@types/redis',
     'redis',
-    'express'
+    'express',
   ],
 });
 
-project.addScript('deploy', 
-  'cdk8s --app "npx ts-node src/app/main.ts" synth', 
-  'kubectl apply -f dist/ --prune --selector "prune=kubecon-demo"');
+const deploy = project.addTask('deploy');
+deploy.exec('cdk8s --app "npx ts-node src/app/main.ts" synth');
+deploy.exec('kubectl apply -f dist/ --prune --selector "prune=kubecon-demo"');
 
 project.synth();
