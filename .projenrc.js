@@ -11,10 +11,8 @@ const project = new TypeScriptAppProject({
   ],
   devDeps: [
     'ts-node',
-    '@types/express',
     '@types/redis',
     'redis',
-    'express',
   ],
 });
 
